@@ -39,7 +39,10 @@ abstract class AbstractCondition
      */
     final static function validate(array $params)
     {
-        if (static::$params !== array_keys($params)) {
+        sort(static::$params);
+        $testParams = array_keys($params);
+        sort($testParams);
+        if (static::$params !== $testParams) {
             throw new \Exception('Insufficient parameters.');
         }
     }
