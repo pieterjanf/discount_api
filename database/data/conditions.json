@@ -1,0 +1,43 @@
+{
+    "_comment": [
+        "List of conditions and the discounts they trigger",
+        "They need be sorted in logical order as for instance discounts on order total",
+        "should be apply at the end.",
+        "Reduction rules can become far too complex for this solution,",
+        "But this holds up for now"
+    ],
+    "items": [
+        {
+            "id": "ProductBelongsToCategory",
+            "condition_params": {
+                "category": 2
+            },
+            "discount": "FreeItemForVolume",
+            "discount_params": {
+                "amount": 5,
+                "category": 2 
+            }
+        },
+        {
+            "id": "ProductBelongsToCategory",
+            "condition_params": {
+                "category": 1
+            },
+            "discount": "ApplyProcentToCheapest",
+            "discount_params": {
+                "percentage": 20,
+                "category": 1 
+            }
+        },
+        {
+            "id": "CustomerHasRevenueOver",
+            "condition_params": {
+                "minimum": 1000
+            },
+            "discount": "ApplyProcentToOrderTotal",
+            "discount_params": {
+                "percentage": 10
+            }
+        }
+    ]
+}
