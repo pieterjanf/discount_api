@@ -1,4 +1,11 @@
 <?php
+/**
+ * Web routes file
+ * 
+ * @category Routes
+ * @author   Pieterjan Fiers <pjfiers@gmail.com>
+ * @version  0.1
+ */
 
 /*
 |--------------------------------------------------------------------------
