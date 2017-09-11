@@ -41,7 +41,7 @@ class ApplyProcentToOrderTotal extends AbstractDiscount
     {
         static::validate($params);
         $total = (float) $order['total'];
-        $coeficient = 1 + ($params['percentage'] / 100);
+        $coeficient = 1 - ($params['percentage'] / 100);
         $newTotal = $total * $coeficient;
         $order['total'] = $newTotal;
         return $order;

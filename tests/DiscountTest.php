@@ -117,7 +117,7 @@ class DiscountTest extends TestCase
      */
     public function testApplyTenProcentToOrderTotal()
     {
-        $test = (float) $this->sampleOrder['total'] * 1.1;
+        $test = (float) $this->sampleOrder['total'] * 0.9;
         $result = \App\Discounts\ApplyProcentToOrderTotal::apply(
             $this->sampleOrder,
             [
