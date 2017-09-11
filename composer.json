@@ -2,6 +2,7 @@
     "name": "pj/discount_api",
     "description": "Discount API",
     "license": "MIT",
+    "version": "0.1",
     "type": "project",
     "require": {
         "php": ">=7.0.0",
