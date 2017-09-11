@@ -1,4 +1,11 @@
 <?php
+/**
+ * Discount controller file
+ * 
+ * @category Controllers
+ * @author   Pieterjan Fiers <pjfiers@gmail.com>
+ * @version  0.1
+ */
 
 namespace App\Http\Controllers;
 
@@ -6,8 +13,22 @@ use Illuminate\Http\Request;
 use \App\Condition;
 use \App\Discount;
 
+/**
+ * Discount controller class
+ * 
+ * @category Controllers
+ * @author   Pieterjan Fiers <pjfiers@gmail.com>
+ * @version  0.1
+ */
 class DiscountController extends Controller
 {
+    /**
+     * Parse the order request
+     *
+     * @param Illuminate\Http\Request $request
+     * 
+     * @return jsonResponse
+     */
     public function postIndex(Request $request)
     {
         $order = $request->all();
