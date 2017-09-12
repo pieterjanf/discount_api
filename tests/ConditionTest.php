@@ -100,7 +100,7 @@ class ConditionTest extends TestCase
                 $oneCondition
             );
             $this->assertObjectHasAttribute(
-                'reduction',
+                'discount',
                 $oneCondition
             );
             $this->assertObjectHasAttribute(
