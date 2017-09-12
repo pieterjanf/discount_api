@@ -1,12 +1,35 @@
 <?php
-
+/**
+ * JSON Model file
+ * 
+ * @category Models
+ * @author   Pieterjan Fiers <pjfiers@gmail.com>
+ * @version  0.1
+ */
 namespace App;
 
-class JsonModel
+/**
+ * JSON Model class
+ * 
+ * @category Models
+ * @author   Pieterjan Fiers <pjfiers@gmail.com>
+ * @version  0.1
+ */
+abstract class JsonModel
 {
+    /**
+     * JSON file name
+     *
+     * @var string
+     */
     protected static $filename = '';
 
-    protected static function collection()
+    /**
+     * Read json file and return as collection
+     *
+     * @return void
+     */
+    final protected static function collection()
     {
         $json = file_get_contents(
             __DIR__ . '/../database/data/' . static::$filename . '.json'
@@ -24,12 +47,24 @@ class JsonModel
         return $collection;
     }
 
-    public static function all()
+    /**
+     * Return complete collection
+     *
+     * @return void
+     */
+    final public static function all()
     {
         return static::collection();
     }
 
-    public static function find($id)
+    /**
+     * Find one entity by ID
+     *
+     * @param [type] $id Entity-ID
+     * 
+     * @return object|bool
+     */
+    final public static function find($id)
     {
         $collection = static::collection();
         foreach ($collection as $entity) {
